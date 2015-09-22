@@ -1,0 +1,6 @@
+h1 Dashboard
+div.well-lg
+    h2 I keep all of my favorite things in a firebase. What about you?
+    div(ng-repeat="(key, val) in vm.content")
+        | {{val.$id}} are {{val.$value}}
+a(ui-sref="home") Home

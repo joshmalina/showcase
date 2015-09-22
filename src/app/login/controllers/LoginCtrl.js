@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = LoginUpCtrl;
+module.exports = LoginCtrl;
 
 /**
  * @ngInject
  */
-function LoginUpCtrl(AuthService) {
+function LoginCtrl(AuthService) {
     var vm = this;
 
     vm.login = function() {

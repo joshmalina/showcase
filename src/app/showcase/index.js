@@ -9,7 +9,8 @@ require('angular')
 
         /* Custom */
         require('../signup'),
-        require('../login')
+        require('../login'),
+        require('../dashboard')
     ])
     .config(require('./config'))
     .config(require('./route'));

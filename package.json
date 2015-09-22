@@ -59,5 +59,11 @@
   "license": "UNLICENSED",
   "private": true,
   "authors": "Anid Monsur <anid.monsur@bookbottles.com>",
-  "repository": "bookbottles/showcase"
+  "repository": "bookbottles/showcase",
+  "dependencies": {
+    "angularfire": "^1.1.2",
+    "angularfire-browserify": "0.0.1",
+    "client-firebase": "^1.0.1",
+    "firebase": "^2.2.9"
+  }
 }
