@@ -1,0 +1,19 @@
+h1 Login
+p 
+    | {{vm.messages}}
+form#loginForm(name="loginForm", novalidate).appForm
+    div.form-group
+        label Username
+        input(type="text", ng-model="vm.user.username", required).form-control
+    div.form-group
+        label Password
+        input(type="password", ng-model="vm.user.password", required).form-control
+    div.form-group
+        button.btn.btn-default(ng-click='vm.login()', ng-disabled='loginForm.$invalid') Login
+a(ui-sref="home") Home
+br
+br
+p
+    | Don't have an account yet?
+    p
+        a(ui-sref="signup") Signup

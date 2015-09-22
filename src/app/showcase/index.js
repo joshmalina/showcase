@@ -8,7 +8,8 @@ require('angular')
         require('angulartics-google-analytics'),
 
         /* Custom */
-        require('../signup')
+        require('../signup'),
+        require('../login')
     ])
     .config(require('./config'))
     .config(require('./route'));

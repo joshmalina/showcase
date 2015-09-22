@@ -1,4 +1,27 @@
 h1 Sign Up
-div
-    button.btn.btn-default(ng-click='vm.signUp()') Create User
+p
+    | {{vm.messages}}
+form#signupForm(novalidate, name="signupForm").appForm
+    div.form-group
+        label Username
+        br
+        input(type="text", ng-model="vm.user.username", required).form-control
+    div.form-group
+        label Password
+        br
+        input(type="password", ng-model="vm.user.password", required).form-control
+    div.form-group
+        label Confirm Password
+        br
+        input(type="password", ng-model="vm.user.confirmPassword", required).form-control.ng-invalid
+    p
+        * All fields required
+    div
+        button.btn.btn-default(ng-click='vm.signUp()', ng-disabled='signupForm.$invalid') Create User
 a(ui-sref="home") Home
+br
+br
+p
+    | Already have an account?
+    p
+        a(ui-sref="login") Login

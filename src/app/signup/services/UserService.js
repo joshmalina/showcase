@@ -15,7 +15,7 @@ function UserService() {
     //////////
 
     function create() {
-        console.debug('Creating a user');
+    	return 'Thanks for signing up! You will now be redirected to the dashboard.';
     }
 }
 
