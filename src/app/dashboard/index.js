@@ -10,4 +10,5 @@ module.exports = require('angular')
     .config(require('./route'))
     .controller('DashboardCtrl', require('./controllers/DashboardCtrl'))
     .factory('DataStore', require('./services/DataStore'))
+    .directive('format', require('./directives/format'))
     .name;
