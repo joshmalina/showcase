@@ -7,20 +7,20 @@ module.exports = DataStore;
 function DataStore($firebaseArray) {
 
     var DataStore = {
-        getSomething: getSomething
+        getFavorites: getFavorites
     };
 
     return DataStore;
 
     //////////
 
-    function getSomething() {
+    function getFavorites() {
 
-    	var ref = new Firebase('https://bookbottles.firebaseio.com/');
+    	var ref = new Firebase('https://bookbottles.firebaseio.com/favorites');    
 
-    	var obj = $firebaseArray(ref.child('favorites'));
+    	var array = $firebaseArray(ref);
 
-    	return obj;
+    	return array;
     }
 }
 

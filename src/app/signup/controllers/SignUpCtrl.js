@@ -5,7 +5,7 @@ module.exports = SignUpCtrl;
 /**
  * @ngInject
  */
-function SignUpCtrl(UserService) {
+function SignUpCtrl(UserService, $location, $timeout) {
     var vm = this;
 
     vm.signUp = function() {
@@ -17,6 +17,10 @@ function SignUpCtrl(UserService) {
     	}
 
     	vm.messages = UserService.create();
+
+    	$timeout(function() {
+    		$location.path('/dashboard');
+		}, 2500);
 
     }
     

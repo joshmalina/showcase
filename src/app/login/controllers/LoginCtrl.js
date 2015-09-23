@@ -5,7 +5,7 @@ module.exports = LoginCtrl;
 /**
  * @ngInject
  */
-function LoginCtrl(AuthService) {
+function LoginCtrl(AuthService, $location, $timeout) {
     var vm = this;
 
     vm.login = function() {
@@ -16,6 +16,10 @@ function LoginCtrl(AuthService) {
     	}    	
 
     	vm.messages = AuthService.login();
+
+    	$timeout(function() {
+    		$location.path('/dashboard');
+		}, 2500);
 
     }
     
